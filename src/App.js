@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import FieldContainer from './components/fieldContainer';
 
 function App() {
   return (
     <div className="App">
+    <FieldContainer/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
