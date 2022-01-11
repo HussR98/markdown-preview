@@ -1,4 +1,5 @@
 import React from 'react';
+import { InfieldWrapper } from './infield.styles';
 
 const Infield = ({setter, val, onChange}) => {
 
@@ -22,7 +23,7 @@ const Infield = ({setter, val, onChange}) => {
         }
     }
 
-    return <input defaultValue= {val} onKeyDown = {onKeyDownHandler} onChange = {onChange}/>
+    return <InfieldWrapper defaultValue= {val} onKeyDown = {onKeyDownHandler} onChange = {onChange}/>
 }
 
 export default Infield;
