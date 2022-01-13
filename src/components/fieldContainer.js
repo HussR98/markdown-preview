@@ -8,7 +8,7 @@ import Button from './button';
 import Title from './title';
 
 
-const FieldContainer = ({def = 'type text here'}) => {
+const FieldContainer = ({def = 'type markdown here'}) => {
     const [displayed, setDisplayed] = useState(def);
     const [started, setStarted] = useState(false);
 
@@ -27,12 +27,15 @@ const FieldContainer = ({def = 'type text here'}) => {
         setStarted(true);
     }
 
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text)
+    }
 
     return (
     <ContainerWrapper>
-        <Title/>
+        <Title titleText = 'Markdown Preview'/>
         <Toggle label1 = 'Markdown' label2 = 'HTML' setting = {setting} onClick = {onToggleClick}/>
-        <Button/>
+        <Button label = 'Copy to clipboard' operation = {copyToClipboard} data = {displayed}/>
         <Infield setter = {setDisplayed} val = {displayed} onChange = {onChange}/>
         {setting ? 
         <MarkdownWrapper dangerouslySetInnerHTML = {started ? createMarkup() : {__html: '<p>Markdown Preview</p>'}}/> :

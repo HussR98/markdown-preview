@@ -9,7 +9,7 @@ export const ToggleWrapper = styled.div`
     grid-row: 2/3;
     grid-column: 2/3;
     width: 20vw;
-    justify-self: center;
+    justify-self: start;
     border: 3px solid rgb(29 161 242);;
     border-radius: 40px;
     padding: 5px 3%;
