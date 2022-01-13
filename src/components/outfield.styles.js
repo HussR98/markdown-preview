@@ -9,6 +9,7 @@ export const OutfieldWrapper = styled.div`
     justify-self: center;
     margin-top: 3px;
     border-radius: 6px;
+    background: white;    
 
-    overflow: scroll;
+    overflow: auto;
 `
