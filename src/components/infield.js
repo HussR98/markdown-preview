@@ -3,7 +3,7 @@ import { InfieldWrapper } from './infield.styles';
 
 const Infield = ({setter, val, onChange}) => {
 
-
+    /*
     const onKeyDownHandler = (e) => {
         let keycode = e.keyCode;
         let valid = 
@@ -22,6 +22,20 @@ const Infield = ({setter, val, onChange}) => {
             setter(val + e.key);
         }
     }
+    */
+
+    const onKeyDownHandler = (e) => {
+        let key = e.key;
+        let valid = key.length === 1;
+
+        if (key === 'Enter') {
+            setter(val + '\n');
+        }
+        else if (valid){
+            setter(val + key);
+        }
+    }
+
 
     return <InfieldWrapper defaultValue= {val} onKeyDown = {onKeyDownHandler} onChange = {onChange}/>
 }
