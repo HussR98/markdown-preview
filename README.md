@@ -5,7 +5,7 @@ A simple web-app that allows the user to preview the markdown markup language fo
 Use it [here.](https://markdown-hr.netlify.app/)
 
 ### Known Issues:
-* some problems with text alignment in the markdown preview
+* <s>some problems with text alignment in the markdown preview</s>
 
 ### To Do:
 * make site design fully responsive
