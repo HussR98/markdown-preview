@@ -19,6 +19,7 @@ export const MarkdownWrapper = styled.div`
     margin-top: 3px;
     border-radius: 6px;
     background: white;
+    text-align: start;
 
     overflow: auto;
 `
